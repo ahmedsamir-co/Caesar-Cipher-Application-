@@ -1,0 +1,35 @@
+
+
+
+
+text = input("enter your text : ")
+key = input("enter your key : ")
+
+result = ""
+for i in range (len(text)):
+    char = text[i]
+    cipher = chr((ord(char)))(- 65 + key % 26 + 65)
+
+    #result += cipher
+
+print(result)
+
+########################
+def encrypt(text,key):
+
+    cipher_list = []
+    # ناخذ النص المراد تشفيره ونضعه ف list وناخذ رقم كل حرف  من الاسكي كود
+    for i in text:
+
+        position  =((ord(i)))
+
+
+        new_letter = chr(position + key)
+        cipher_list.append(new_letter)
+    t = ''.join(cipher_list)
+    print(t)
+
+text = list(input("enter your text : "))
+key = int(input("enter your key : "))
+encrypt(text,key)
+
